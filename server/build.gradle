@@ -28,19 +28,34 @@ ext {
 }
 
 dependencies {
+	// open ai
 	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+	// jpa
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
-	implementation 'org.mindrot:jbcrypt:0.4'
-	implementation 'org.apache.pdfbox:pdfbox:2.0.30'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// mariaDB driver
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	// oracle driver
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+	// thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	// spring web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// validation
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// swagger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+	// password BCrypt
+	implementation 'org.mindrot:jbcrypt:0.4'
+	// pdf
+	implementation 'org.apache.pdfbox:pdfbox:2.0.30'
+	// lombok
+	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	// devtools
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// spring starter
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// JUnit Test
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
